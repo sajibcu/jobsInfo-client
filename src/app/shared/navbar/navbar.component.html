@@ -1,5 +1,5 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
-  <div class="container">
+  <div class="container" style="box-sizing: initial;">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
       <img src="./assets/img/brand/argon-white.png">
     </a>
@@ -25,7 +25,47 @@
         </div>
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+
         <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+            <span class="nav-link-inner--text">Jobs</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Company Reviews</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Salaries</span>
+          </a>
+
+          <div class="dropdown-menu" data-toggle="dropdown">
+            <a  class="dropdown-item" style="cursor: pointer;">Reviews</a>
+            <a  class="dropdown-item" style="cursor: pointer;">Comparison</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Interviews</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Write Review</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button">
             <i class="ni ni-ui-04 d-lg-none"></i>
             <span class="nav-link-inner--text">Components</span>
@@ -61,19 +101,7 @@
               </a>
             </div>
           </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Examples</span>
-          </a>
-          <div class="dropdown-menu">
-            <a [routerLink]="['/landing']" class="dropdown-item">Landing</a>
-            <a [routerLink]="['/user-profile']" class="dropdown-item">Profile</a>
-            <a [routerLink]="['/login']" class="dropdown-item">Login</a>
-            <a [routerLink]="['/register']" class="dropdown-item">Register</a>
-          </div>
-        </li>
+        </li> -->
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
         <li class="nav-item">
@@ -101,11 +129,11 @@
           </a>
         </li>
         <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+          <a [routerLink]="['/login']" class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">
-              <i class="fa fa-cloud-download mr-2"></i>
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
             </span>
-            <span class="nav-link-inner--text">Download</span>
+            <span class="nav-link-inner--text">Login</span>
           </a>
         </li>
       </ul>
