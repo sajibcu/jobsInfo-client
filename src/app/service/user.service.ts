@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CommonService } from './common/common.service';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {CommonService} from './common/common.service';
 import {SERVER_API_URL} from '../app.constant';
 
 export class User {
@@ -11,12 +11,9 @@ export class User {
         public dob: any,
         public gender: any,
         public mobile: any,
-        public telephone: any,
         public email: any,
         public userType: any,
-        public institutionId: any,
         public nid: any,
-        public passport: any,
         public password: any,
         public address: any,
         public city: any,
@@ -25,7 +22,6 @@ export class User {
         public country: any,
         public activated: boolean,
         public locked: boolean,
-        public recaptchaResponse: any,
     ) {
 
     }

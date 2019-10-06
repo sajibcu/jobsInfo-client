@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../service/auth.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../service/auth.service';
+import {FormGroup, FormBuilder} from '@angular/forms';
+import {User} from '../service/user.service';
 
 @Component({
     selector: 'app-signup',
@@ -8,28 +9,35 @@ import { FormGroup, FormBuilder } from '@angular/forms';
     styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-     registerForm: FormGroup;
+    registerForm: FormGroup;
     private email;
     private password;
     test: Date = new Date();
     focus;
     focus1;
     focus2;
-    constructor(private authService: AuthService,
-    //    private _formBuilder: FormBuilder,
-        ) { }
 
-    ngOnInit() { 
+    user: User = new User('', '', '', '', '', '', '', '2', '', '', '', '', '', '', '', true, false);
+
+    constructor(private authService: AuthService,
+                //    private _formBuilder: FormBuilder,
+    ) {
+    }
+
+    ngOnInit() {
         // this.registerForm=this._formBuilder.group({
         //     email:[''],
         //     password:['']
         // })
     }
 
-    googleSignIn(): void {
+    signInWithGoogle(): void {
+
         this.authService.GoogleSignIn();
     }
+
     signUp(): void {
-        console.log(this.email)
+        console.log(this.user);
+        this.authService.SignUp(this.user.email, this.user.password);
     }
 }

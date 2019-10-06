@@ -178,7 +178,7 @@ export class AuthService {
         return this.afAuth.auth.signInWithPopup(provider)
             .then((result) => {
                 this.ngZone.run(() => {
-                    this.router.navigate(['courses/course-list']);
+                    this.router.navigate(['/']);
                 });
                 this.setUserData(result.user);
             }).catch((error) => {
