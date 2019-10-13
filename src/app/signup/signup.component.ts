@@ -37,7 +37,6 @@ export class SignupComponent implements OnInit {
     }
 
     signUp(): void {
-        console.log(this.user);
         this.authService.SignUp(this.user.email, this.user.password);
     }
 }
